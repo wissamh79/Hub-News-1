@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block title %} Article {% endblock %}
+
+{% block body %}
+<div class="article-section">
+  <div class="article-header">
+    <div class="details">
+      <div class="topDetails">
+        <div>
+          <h2 class="artId">Article #{{article.id}}</h2>
+          <h2 class="artDate">--- {{ article.articleDate | date:"M d"}}</h2>
+        </div>
+        <div>
+          <a href="#" class="shareNews"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share-fill" viewBox="0 0 16 16">
+            <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"/>
+          </svg></a>  
+        </div>
+      </div>
+      <h2 class="artTitle">{{article.title}}</h2>
+      <h2 class="artContent">{{article.content}}</h2><br>
+      <a href="{% url 'article' article.id %}" class="artMore">more about Title Potato</a>
+  
+    </div>
+  </div>
+<div class="article-image" style="background-image: url('{{article.image}}');"></div>
+
+
+
+</div>
+<div class="rower-title">
+  <div class="coler-title">
+    <h1>5:00 <div class="edit-color">PM</div></h1>
+    <h2>Time</h2>
+  </div>
+  <div class="coler-title">
+    <h1>10<span>/</span>11</h1>
+    <h2>Date</h2>
+  </div>
+  <div class="coler-title">
+    <h1>Hub<div class="edit-color">200</div></h1>
+    <h2>Location</h2>
+  </div>
+</div><br>
+<br>
+<hr>
+<br><br>
+<div class="category-container">
+  <div class="category">
+    <h1>{{article.title}} Category</h1>
+    <h3>{{article.upperContent}}</h3>
+    {% if article.secondImage_recom %}
+    <div class="image" style="background-image: url('{{ article.secondImage_recom }}')"></div>
+    {%else%}
+    <div class="image" style="background-image: url('{{ article.image }}')"></div>
+    {%endif%}
+    <h3>{{article.underContent}}</h3>
+    <br>
+
+  </div>
+
+</div>
+<hr>
+<br>
+
+<div class="comments">
+  <div>test</div>
+  <input class="comment-input" type="text">
+</div>
+
+
+<!-- <h1>{{ article.title}}</h1>
+<h1>{{ article.content}}</h1>
+<h1>{{ article.category}}</h1>
+<h1 style="text-transform: uppercase;">{{ article.articleDate | date:"M d"}}</h1>
+<h1>{{ article.articleTime}}</h1>
+<h1>{{ article.createdAt}}</h1> -->
+
+
+{% endblock %}

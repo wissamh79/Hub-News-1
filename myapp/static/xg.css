@@ -1,0 +1,601 @@
+:root{
+  --main-color: #1A8CF7;
+  --dark-color: #191518;
+  --bg-color: #F6F9FF;
+  --white-color: #ffffff;
+  --gray-color: #3c3c3b ;
+}
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  font-size: 95%;
+}
+
+nav{
+  position: sticky;
+  top:0;
+  z-index: 100;
+  opacity: 95;
+  display: flex;
+  font-family: "Biennale";
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--second-color);
+  padding: 5px 40px;
+  background-color: var(--white-color);
+  color: var(--text-color);
+  align-items: center;
+  width: 100%;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+.nav-line{
+  width: 2px;
+  height: 50px;
+  background-color: #1A8CF7;
+  margin: 0 0 0 25px
+}
+nav div{
+  display: flex;
+  align-items: center;
+}
+nav ul{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+  margin: 0 10px;
+  padding: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--text-color);
+  /* text-transform: uppercase; */
+  display: inline;
+  align-items: center;
+}
+
+nav ul li{
+  display: inline;
+  align-items: center;
+  color: var(--gray-color);
+}
+nav img{
+  width: 125px;
+  display: inline;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+  color: var(--text-color);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+  
+}
+
+.contain{
+  display: flex;
+  flex-direction: column;
+  margin-top: 65px;
+  align-items: center;
+}
+.Bigtitle{
+  color: var(--dark-color);
+  font-family: "FSP DEMO - Biennale Bold";
+text-align: center;
+font-size: 48px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-transform: capitalize;
+margin-bottom: 20px;
+}
+.dropdown-news{
+  width: 467px;
+height: 56px;
+flex-shrink: 0;
+border-radius: 40px;
+background: var(--white-color);
+box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+align-items: center;
+display: flex;
+flex-direction: row;
+}
+.dropdown-toggle-news{
+margin-left: 10px;
+padding-right: 310px;
+}
+.dropdown-menu-news{
+margin-left: 10px;
+padding-right: 10px;
+
+}
+.dropdown-item-news{
+  margin: 0 10px;
+  padding-right: 350px;
+}
+.article{
+  background-color: var(--white-color);
+  display: flex;
+width: 80%;
+height: 332px;
+margin-top: 30px;
+box-shadow: 0px 0px 19px -5px rgba(0,0,0,0.43);
+-webkit-box-shadow: 0px 0px 19px -5px rgba(0,0,0,0.43);
+-moz-box-shadow: 0px 0px 19px -5px rgba(0,0,0,0.43);
+justify-content: space-between;
+border-radius: 40px 40px 40px 40px;
+z-index: 0;
+}
+.article-header{
+  background-color: var(--white-color);
+  display: flex;
+width: 40%;
+height: 332px;
+margin-top: 30px;
+box-shadow: 0px 0px 19px -5px rgba(0,0,0,0.43);
+-webkit-box-shadow: 0px 0px 19px -5px rgba(0,0,0,0.43);
+-moz-box-shadow: 0px 0px 19px -5px rgba(0,0,0,0.43);
+justify-content: space-between;
+border-radius: 40px 40px 40px 40px;
+margin: 50px 650px 0 0;
+z-index: 0;
+}
+.article-section{
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+.article-image{
+  width: 800px;
+  height: 550px;
+  background-color: #D6E3FE;
+  position: absolute;
+  background-position: center;
+  background-size: cover;
+  margin-left: 570px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 19px -5px rgba(0,0,0,0.83);
+-webkit-box-shadow: 0px 0px 19px -5px rgba(0,0,0,0.83);
+-moz-box-shadow: 0px 0px 19px -5px rgba(0,0,0,0.83);
+  z-index: -1;
+}
+.article .details{
+  padding: 20px 50px;
+}
+.rower-title{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+}
+.coler-title{
+  display: flex;
+  flex-direction: column;
+}
+.coler-title h1{
+  font-size: 40px;
+  font-family: 'FSP DEMO - Biennale Bold';
+  color: #1D2F6C;
+}
+.coler-title h2{
+  font-size: 15px;
+  font-weight: bold;
+  font-family: 'Biennale';
+  color: #646D9C;
+}
+span{
+  color: var(--main-color);
+  font-family: arial;
+  font-weight: bold;
+}
+.edit-color{
+  color: var(--main-color);
+  display: inline;
+}
+.article-header .details{
+  padding: 20px 50px;
+}
+.article .details .artTitle{
+  color: var(--dark-color);
+font-family: 'FSP DEMO - Biennale Bold';
+margin-top: 20px;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-transform: capitalize;
+}
+.article-header .details .artTitle{
+  color: var(--dark-color);
+font-family: 'FSP DEMO - Biennale Bold';
+margin-top: 20px;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-transform: capitalize;
+}
+.instagram-icon:hover{
+  background: #d6249f;
+  border-radius: 8px;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+.linked-in-icon:hover{
+  color:#0077b5;
+}
+.category-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: 'Biennale';
+}
+.comments{
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.comments div{
+  display: flex;
+  
+}
+.comment-input{
+  flex-shrink: 0;
+  width: 400px;
+  align-items: center;
+  box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.25);
+  padding: 12px 20px;
+  border-radius: 10px;
+  transition: .2s ease;
+}
+.category{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: 'Biennale';
+}
+.category h1{
+  font-size: 40px;
+  margin: 20px 0 10px 0 ;
+  font-family: "Biennale";
+  font-weight: bolder;
+  color:#1E2F6D;
+  text-align: left;
+}
+.category h3{
+  font-size: 16px;
+  width: 50%;
+  color:var(--gray-color);
+}
+.category .image{
+  width: 60%;
+  height: 500px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 14px -5px rgba(0, 0, 0, 0.43);
+  -webkit-box-shadow: 0px 0px 14px -5px rgba(0, 0, 0, 0.43);
+  -moz-box-shadow: 0px 0px 14px -5px rgba(0, 0, 0, 0.43);
+  background: var(--gray-color);
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  margin: 20px 0;
+}
+.logo-circle{
+  width: 40px;
+  height: 40px;
+  border-radius: 200px;
+  background-color: var(--gray-color);
+}
+.article .details i{
+  font-size: 30px;
+  display: block;
+  margin-top: 10px;
+}
+.article-header .details i{
+  font-size: 30px;
+  display: block;
+  margin-top: 10px;
+}
+.article .details .artContent{
+  color: var(--gray-color);
+font-family: 'Biennale';
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+text-transform: capitalize;
+margin-top: 10px;
+}
+.article-header .details .artContent{
+  color: var(--gray-color);
+font-family: 'Biennale';
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+text-transform: capitalize;
+margin-top: 10px;
+}
+.signin{
+  color: var(--main-color);
+}
+.article .details .artMore{
+  color: var(--main-color);
+  font-family: 'Biennale';
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+text-decoration-line: underline;
+text-transform: capitalize;
+} 
+.article-header .details .artMore{
+  color: var(--main-color);
+  font-family: 'Biennale';
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+text-decoration-line: underline;
+text-transform: capitalize;
+} 
+.article .details .shareNews svg{
+  margin: 20px 0;
+  width: 30px;
+  height: 30px;
+}
+.article-header .details .shareNews svg{
+  margin: 20px 0;
+  width: 30px;
+  height: 30px;
+}
+.first-section-all{
+  margin: 60px 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-family: "Biennale";
+  padding-bottom: 44px;
+}
+.text-left{
+  margin: 130px 0;
+}
+.text-left h1{
+  font-size: 40px;
+  margin: 0 0 20px 0 ;
+  font-family: "Biennale";
+  font-weight: bolder;
+  color:#1E2F6D;
+}
+.text-left h3{
+  font-size: 20px;
+  width: 70%;
+  color:var(--gray-color);
+  margin: 0 0 20px 0;
+}
+.text-left button{
+  padding: 10px 30px; 
+  font-size: 15px;
+}
+.illustration img{
+  max-width: 100%;
+  height: auto;
+  margin-right: 200px;
+  object-fit: cover;
+}
+
+.article .img{
+  width: 110%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  border-radius: 0 40px 40px 0;
+}
+footer{
+  display: flex;
+  justify-content: space-between;
+  background-color: #282C2F;
+  width: 100%;
+  margin-top: 80px;
+  position: relative;
+  font-family: "Biennale";
+  font-weight: bold;
+  bottom: 0;
+  padding: 20px 120px;
+}
+.footer-section{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color:var(--white-color)
+}
+.icon-circle{
+  width: 50px;
+  height: 50px;
+  background:var(--gray-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  margin: 5px 20px 5px 0;
+}
+.icon-circle svg{
+  color: var(--white-color);
+  width: 25px;
+  height: 25px;
+}
+.footer-right{
+  display: flex;
+  flex-direction: column;
+  width:50%;
+  color: var(--white-color);
+  margin:8px 0px;
+}
+.footer-right h1{
+  font-size: 25px;
+  margin: 8px 0;
+}
+.footer-right h2{
+  margin: 8px 0;
+  font-weight: normal;
+}
+.icons{
+  display: flex;
+  flex-direction: row;
+}
+.article .details .topDetails{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "Biennale";
+  font-weight: bold;
+  text-transform: uppercase;
+  align-items: center;
+}
+.article .details .topDetails div{
+  display: inline-flex;
+  flex-direction: row;
+}
+.article .details .topDetails div .artId{
+  color:var(--main-color);
+  margin-right: 6px;
+}
+
+
+.article-header .details .topDetails{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "Biennale";
+  font-weight: bold;
+  text-transform: uppercase;
+  align-items: center;
+}
+.article-header .details .topDetails div{
+  display: inline-flex;
+  flex-direction: row;
+}
+.article-header .details .topDetails div .artId{
+  color:var(--main-color);
+  margin-right: 6px;
+}
+.signat a{
+  margin: 0 20px;
+}
+
+
+.sign-section{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 20px 50px;
+  align-items: center;
+  min-height: 85vh;
+}
+.left-side{
+  background-color: var(--white-color);
+  box-shadow: 0px 0px 28px 3px rgba(26,140,247,0.75);
+-webkit-box-shadow: 0px 0px 28px 3px rgba(26,140,247,0.75);
+-moz-box-shadow: 0px 0px 28px 3px rgba(26,140,247,0.75);
+  border-radius: 20px;
+  padding: 30px;
+  width: 400px;
+  
+}
+.sign-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sign-box h1{
+  text-align: center;
+  font-size: 30px;
+  font-family: "Biennale";
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 10px 0 30px 0;
+}
+
+
+
+.sign-box input[type=text]{
+  width: 100%;
+  box-shadow: 0px 0px 16px -4px rgba(0,0,0,0.82);
+  -webkit-box-shadow: 0px 0px 16px -4px rgba(0,0,0,0.82);
+  -moz-box-shadow: 0px 0px 16px -4px rgba(0,0,0,0.82);
+  padding: 12px;
+  
+  border-radius: 10px;
+  transition: .2s ease;
+}
+.sign-box label{
+  margin: 30px 0 10px 5px;
+  font-family: "Biennale";
+
+}
+.sign-box input[type="submit"]{
+  background-color: var(--main-color);
+  box-shadow: 0px 0px 10px 3px rgba(26,140,247,0.75);
+  -webkit-box-shadow: 0px 0px 10px 3px rgba(26,140,247,0.75);
+  -moz-box-shadow: 0px 0px 10px 3px rgba(26,140,247,0.75);
+  padding: 10px 40px;
+  border-radius: 7px;
+  color: var(--white-color);
+  text-transform: uppercase;
+  transition: .2s ease;
+
+}
+.sign-box input[type="submit"]:hover{
+  background-color: transparent;
+  color: var(--main-color);
+}
+.sign-box a{
+  color: var(--main-color);
+  font-family: "Biennale";
+  margin: 20px 0 0 0;
+}
+.sign-box input[type=text]:focus{
+  box-shadow: 0px 0px 16px -4px rgba(26,140,247,0.82);
+-webkit-box-shadow: 0px 0px 16px -4px rgba(26,140,247,0.82);
+-moz-box-shadow: 0px 0px 16px -4px rgba(26,140,247,0.82);
+}
+.right-side img{
+  width: 550px;
+}
+.circle-behind{
+  width: 500px;
+  height: 520px;
+  transform: rotate(-15deg);
+  background-color: #D6E3FE;
+  border-radius: 435325234px;
+  position: absolute;
+  margin-left: 20px;
+  z-index: -1;
+}
+
+@media (max-width: 600px) {
+  .illustration img {
+    display: none;
+    background-color: red;
+  }
+}

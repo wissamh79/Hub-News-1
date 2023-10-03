@@ -1,0 +1,111 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{% block title %}Hub News{% endblock %}</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://db.onlinewebfonts.com/c/beba489cd0b5d0000a2ebb0d0ae86913?family=FSP+DEMO+-+Biennale+Bold"
+      rel="stylesheet"
+    />
+    <link
+      href="https://db.onlinewebfonts.com/c/ab115b4a1db57541d7c9c9e39db76c56?family=Biennale"
+      rel="stylesheet"
+    />
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+      integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="{% static 'xg.css' %}" rel="stylesheet" />
+  </head>
+
+  <body class="bg-[#F6F9FF]">
+    <nav>
+      <div>
+        <img src="{% static 'hub.png'%}" class="nav-logo" alt="Hub200 logo" />
+        <div class="nav-line"></div>
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="{% url 'index' %}"
+              >Home</a
+            >
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'news' %}">News</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              data-bs-toggle="dropdown"
+              href="#"
+              role="button"
+              aria-expanded="false"
+              >Categories</a
+            >
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="{% url 'categories' %}"
+                  >All Categories</a
+                >
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              {% for cat in cats%}
+
+              <li>
+                <a class="dropdown-item" href="{% url 'category' cat.id %}"
+                  >{{cat.title}}</a
+                >
+              </li>
+              {% endfor%}
+            </ul>
+          </li>
+        </ul>
+      </div>
+      {% if user.is_authenticated %}
+
+      <div class="dropdown">
+        <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <div class="logo-circle"></div>
+        </button>
+
+        <ul class="dropdown-menu dropdown-menu-dark">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+          <li><hr class="dropdown-divider" /></li>
+          <li><a class="dropdown-item" href="#">Separated link</a></li>
+        </ul>
+      </div>
+      {% else %}
+      <div class="signat">
+        <a class="btn signin">Sign in</a>
+        <a class="btn btn-primaryy">Sign up</a>
+      </div>
+      {% endif %}
+    </nav>
+    {% block body %} {% endblock %}
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+    crossorigin="anonymous"
+  ></script>
+</html>

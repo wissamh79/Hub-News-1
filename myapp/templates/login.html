@@ -1,0 +1,31 @@
+{% extends "layout.html" %} 
+{% load static %}
+
+{% block title %}login page{% endblock %}
+{% block body %}
+<section>
+  <div class="sign-section">
+    <div class="left-side">
+      <div class="sign-box">
+        <h1>Sign in</h1>
+        <hr>
+        <form action="" method="post">
+          <label for="email">Email Address:</label>
+          <input type="text" id="email" placeholder="example@gmail.com">
+          <label for="pass">Password:</label>
+          <input type="text" id="pass" placeholder="ex:m#P52s@ap$V">
+          <br><br>
+          <input type="submit" name="" id="">
+          <!-- <input type="submit" class="btn btn-primary" value="Submit"> -->
+        </form>
+        <a href="#">Don’t have an account ?.. </a>
+      </div>
+    </div>
+    <div class="right-side">
+      <div class="circle-behind"></div>
+      <img src="{% static 'login.svg'%}" alt="">
+    </div>
+  </div>
+</section>
+
+{% endblock %}

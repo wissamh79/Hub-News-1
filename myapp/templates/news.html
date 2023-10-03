@@ -1,0 +1,42 @@
+{% extends "layout.html" %} 
+
+{% block body %} 
+<div class="contain">
+  <h1 class="Bigtitle">All news</h1>
+  <div class="dropdown dropdown-news">
+    <a class="btn bg-[white] dropdown-toggle dropdown-toggle-news" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Dropdown link
+    </a>
+
+    <ul class="dropdown-menu dropdown-menu-news">
+      {% for cat in cats%} 
+        <li><a class="dropdown-item dropdown-item-news" href="#">{{cat.title}}</a></li>
+      {% endfor%} 
+    </ul>
+  </div>
+  {% for article in articles%}
+<div class="article">
+  <div class="details">
+    <div class="topDetails">
+      <div>
+        <h2 class="artId">Article #{{article.id}}</h2>
+        <h2 class="artDate">--- {{ article.articleDate | date:"M d"}}</h2>
+      </div>
+      <div>
+        <a href="#" class="shareNews"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share-fill" viewBox="0 0 16 16">
+          <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"/>
+        </svg></a>  
+      </div>
+    </div>
+    <h2 class="artTitle">{{article.title}}</h2>
+    <h2 class="artContent">{{article.content}}</h2><br>
+    <a href="{% url 'article' article.id %}" class="artMore">more about Title Potato</a>
+
+  </div>
+  <div class="img" style="background-image: url('{{article.image}}');"></div>
+</div>
+{% endfor %}
+</div>
+{% include "footer.html" %}
+{% endblock %}
+

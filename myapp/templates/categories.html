@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% load static %}
+
+
+{% block body %}
+
+
+<div class="first-section-all">
+  <div class="text-left">
+    <h1>Category Subscribe Details</h1>
+    <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since </h3>
+    <button class="btn btn-primary">Let's get started</button>
+  </div>  
+  <div class="illustration">
+    <img src="{% static 'category.svg' %}" alt="">
+  </div>
+
+</div>
+<hr>
+{% for cat in cats %}
+<div class="category-container">
+  <div class="category">
+    <h1>{{cat.title}} Category</h1>
+    <h3>{{cat.content}}</h3>
+    <img class="image" src="{{ cat.image }}" alt="test">
+  </div>
+</div>
+{% endfor %}
+{% include "footer.html" %}
+
+{% endblock %}
